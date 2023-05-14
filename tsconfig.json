@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "lib": [
+      "ES2018",
+      "ScriptHost"
+    ],
+    "allowJs": true,
+    "baseUrl": "src",
+    "checkJs": true,
+    "declaration": true,
+    "jsx": "preserve",
+    "outDir": "./dist",           /* where the transpiled code is going to be left */
+    // "rootDir": "./src",           /* where the code is going to be looked for to be transpiled */
+    "removeComments": true,
+    "esModuleInterop": true,
+    "noEmit": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false, /* this works with clasess WTF*/
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "cdk.out",
+    "dist",
+    "test"
+  ]
+}
