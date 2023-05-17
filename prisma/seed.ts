@@ -27,7 +27,6 @@ async function apiRequest<T>(URL: string): Promise<APIResponse<T>> {
     .split(LINK_SEPARATOR)
     .find((link) => REGEXP_LINK.test(link))
     ?.replace(REGEXP_LINK_FORMATTER, (_match, _link, formattedLink) => formattedLink) || '';
-
   return {
     data,
     nextLink,
@@ -40,10 +39,11 @@ async function getProductsFromShopify() {
   const productsToStore = [];
   try {
     while (url) {
-      const {nextLink, data: {products, error}} = await apiRequest<ProductsResponse>(url);
-      if (error) {
-        throw new Error(error);
+      const {nextLink, data: {products, errors }} = await apiRequest<ProductsResponse>(url);
+      if (errors) {
+        throw new Error(errors);
       }
+      console.log(products);
       productsToStore.push(...products);
       url = nextLink;
     }
@@ -61,9 +61,9 @@ async function getOrdersFromShopify() {
   const ordersToStore = [];
   try {
     while (url) {
-      const {nextLink, data: {orders, error}} = await apiRequest<OrdersResponse>(url);
-      if (error) {
-        throw new Error(error);
+      const {nextLink, data: {orders, errors}} = await apiRequest<OrdersResponse>(url);
+      if (errors) {
+        throw new Error(errors);
       }
       ordersToStore.push(...orders);
       url = nextLink;

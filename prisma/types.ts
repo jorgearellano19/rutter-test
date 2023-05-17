@@ -1,10 +1,10 @@
 export interface ProductsResponse {
   products: Product[];
-  error?: string;
+  errors?: string;
 }
 export interface OrdersResponse {
   orders: Order[];
-  error?: string;
+  errors?: string;
 }
 export interface Order {
   id: number;

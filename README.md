@@ -8,7 +8,7 @@ This Task contains an API based on the Shopifiy API (https://rutterapi.notion.si
   - PostgreSQL
   - Prisma ORM
 
-## How to Run Locally
+## How to Run for the first time
 - Make sure you have the environment variables in your .env file
 
 - Run the following scripts:
@@ -19,6 +19,8 @@ This Task contains an API based on the Shopifiy API (https://rutterapi.notion.si
   - npm run start:dev for dev environment
   - npm run start for production build.
 
+If you already have your data on the db just do:
+ - npm run start:dev
 
 ## How to use the server:
 
