@@ -11,9 +11,10 @@ This Task contains an API based on the Shopifiy API (https://rutterapi.notion.si
   - The Shopify connection is on prisma/seed.ts file. There you can find how I handle the Pagination API requests. 
   - On src files you can find an express server divided on services, routes, middlewares and errors.
 
-## How to Run for the first time
-- Make sure you have the environment variables in your .env file
 
+## How to Run for the first time
+- Make sure you have the environment variables in your .env file based on the .env.example 
+- If you don't have a DB you can use this one shared in this link: https://onetimesecret.com/private/6hbaj54c0sw1j6aqbrijo9drf6rvgva
 - Run the following scripts:
   - npm install
   - npm run prisma:migrate for dev environment and npm run prisma:migrate-prod for prod environment 

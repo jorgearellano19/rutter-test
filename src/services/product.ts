@@ -9,7 +9,6 @@ import STATUS_CODES from '../utils/statusCodes';
 export const getProducts = async (req: CustomRequest<PaginatedParams>, res: Response) => {
   try {
     const {page = 1, size = 15} = req.payload as PaginatedParams;
-    console.log('Page and size', page, size)
     const products = await prisma.product.findMany({
       select: {
         id: true,
