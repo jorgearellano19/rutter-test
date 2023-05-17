@@ -23,6 +23,8 @@ This Task contains an API based on the Shopifiy API (https://rutterapi.notion.si
   - npm run start for production build.
 
 If you already have your data on the db just do:
+ - npm install 
+ - npm run prisma:generate
  - npm run start:dev
 
 ## How to use the server:

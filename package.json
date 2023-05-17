@@ -15,7 +15,8 @@
     "lint:fix": "eslint . --ext .ts --fix",
     "prisma:migrate": "npx prisma migrate dev",
     "prisma:migrate-prod": "npx prisma migrate deploy",
-    "prisma:seed": "npx prisma db seed"
+    "prisma:seed": "npx prisma db seed",
+    "prisma:generate": "npx prisma generate"
   },
   "keywords": [],
   "author": "",
