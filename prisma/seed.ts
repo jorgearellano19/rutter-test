@@ -5,7 +5,7 @@ import {v4 as uuidv4} from 'uuid';
 import {APIResponse, OrdersResponse, ProductsResponse} from './types';
 
 
-const LIMIT_PER_PAGE = 10;
+const LIMIT_PER_PAGE = 50;
 const LINK_SEPARATOR = ',';
 const REGEXP_LINK = /.+(rel="?next=?)/;
 const REGEXP_LINK_FORMATTER = /(<)(.*)(>)(; .*)/;
